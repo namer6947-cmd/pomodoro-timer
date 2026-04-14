@@ -12,8 +12,8 @@ const progressRing = document.querySelector('circle.progress');
 const finishSound = document.getElementById('finish-sound');
 
 let timer = null;
-let timeLeft = 25 * 60;
-let totalTime = 25 * 60;
+let timeLeft = 15 * 60;
+let totalTime = 15 * 60;
 let isRunning = false;
 
 // Progress Ring Calculation
