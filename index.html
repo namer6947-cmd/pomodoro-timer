@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Focus Timer</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <div class="background-glow"></div>
+    
+    <div class="app-container">
+        <header>
+            <h1 id="status-text">Готов к фокусу?</h1>
+            <div class="subtitle">Установи время и начни работу</div>
+        </header>
+
+        <main>
+            <div class="timer-card glass">
+                <div class="progress-ring">
+                    <svg width="240" height="240">
+                        <circle class="bg" cx="120" cy="120" r="110"></circle>
+                        <circle class="progress" cx="120" cy="120" r="110"></circle>
+                    </svg>
+                    <div class="timer-display" id="timer">25:00</div>
+                </div>
+            </div>
+
+            <div class="controls-section glass">
+                <div class="duration-selector" id="duration-selector">
+                    <button class="chip active" data-mins="15">15</button>
+                    <button class="chip" data-mins="25">25</button>
+                    <button class="chip" data-mins="45">45</button>
+                    <button class="chip" data-mins="60">60</button>
+                </div>
+                
+                <div class="action-buttons">
+                    <button id="main-btn" class="primary">Начать Фокус</button>
+                    <button id="cancel-btn" class="secondary hidden">Сброс</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Hidden audio element for notification -->
+    <audio id="finish-sound" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" preload="auto"></audio>
+
+    <script src="app.js"></script>
+</body>
+</html>
